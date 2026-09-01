@@ -1,0 +1,30 @@
+p {
+    color: brown;
+}
+
+#idParrafo {
+    font-size: large;
+    font-weight: bolder;
+}
+
+.claseParrafo{
+
+    background-color: darkgreen;
+}
+
+h3{
+    text-transform: uppercase;
+    text-shadow:2px 2px 4px rgba(30, 212, 112, 0.5);
+}
+
+#otroParrafo{
+    line-height:1.5;
+    letter-spacing: 2px;
+
+}
+
+blockquote{
+    font-family: 'Times New Roman', Times, serif;
+    font-style: italic;
+    
+}
