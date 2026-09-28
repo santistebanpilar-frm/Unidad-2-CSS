@@ -1,0 +1,65 @@
+/*definimos el root para usar luego */
+:root {
+  --color-fondo: #fafafa;
+  --color-tarjeta: #ffffff;
+  --color-texto: #333333;
+  --color-acento: #0080c0;
+  --color-acento-hover: #005f8f;
+  --color-imagen: #d3d3d3;
+}
+body {
+  background-color: var(--color-fondo);
+  color: var(--color-texto);
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+
+h1, h2 {
+  color: var(--color-acento);
+}
+
+.tarjeta {
+  display: inline-block;          /* para que esten una al lado de la otra */
+  vertical-align: top;            /* las alinea por arriba */
+  width: 220px;
+  margin: 10px;                   /* es la separacion entre tarjetas */
+  padding: 15px;                  /* espacio interno de cada caja*/
+  background-color: var(--color-tarjeta);
+  border: 1px solid #ddd;
+  border-radius: 10px;            
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);   
+}
+/*esto hace de lo q seria una foto en realidad*/
+.imagen {
+  width: 100%;
+  height: 150px;
+  background-color: var(--color-imagen);
+  border-radius: 6px;
+  margin-bottom: 10px;
+}
+/*propiedades dentro de las tarjetas*/
+.tarjeta h3 {
+  text-transform: uppercase;   
+  letter-spacing: 1px;
+  color: var(--color-acento);
+  margin: 10px 0;
+}
+
+.tarjeta p {
+  font-size: 14px;
+  line-height: 1.5;
+  margin: 0 0 15px 0;
+}
+/*le damos estilo al boton de cmomprar*/
+.tarjeta button {
+  background-color: var(--color-acento);
+  color: white;
+  border: none;
+  padding: 8px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.tarjeta button:hover {
+  background-color: var(--color-acento-hover);   /* cambia al pasar el mouse */
+}
