@@ -15,13 +15,37 @@
         <h2>Para que sirve?</h2>
         <p id="idParrafo" >Podemos estilizar un sitio web como queramos ya sea poner algun color, distina fuente en la tipografia hasta animarla poniendo efectos visuaes.(parrafo identificado con id, letra en bold)</p>
         <p class="claseParrafo">TAmbien es util para que la pagina se adapte a distintos tamaños de pantallas/dispositivos(parrafo identificado con class,color fondo)</p>
-        <h3>titulo escrito en minuscula pero modificado en css a mayuscula + sombra verde</h3>
-        <p id="otroParrafo"> Esre es un parrafo con lineheigth amplio + letterspacing</p>
+        <h3 id="idTextoConSombra">titulo escrito en minuscula pero modificado en css a mayuscula + sombra verde</h3>
+        <p id="otroParrafo"> Este es un parrafo con lineheigth amplio + letterspacing</p>
         <blockquote>esto es una "cita" en cursiva + fuente Time New Roman</blockquote>
 
-        <div></div>
+       <div class="tarjetaPerfil">
+            <h3>Tarjeta de Perfil</h3>
+            <p>Esta tarjeta muestra border, padding, margin, background-color, border-radius y box-shadow.</p>
+        </div>
 
+        <h2>Display y Visibility</h2>
+
+        <h3>Block</h3>
+            <div class="tarjeta block">Tarjeta 1</div>
+            <div class="tarjeta block">Tarjeta 2</div>
+            <div class="tarjeta block">Tarjeta 3</div>
+
+        <h3>Inline</h3>
+        <span class="tarjeta inline">Tarjeta 1</span>
+        <span class="tarjeta inline">Tarjeta 2</span>
+        <span class="tarjeta inline">Tarjeta 3</span>
+
+        <h3>Inline block</h3>
+        <div class="tarjeta inlineBlock">Tarjeta 1</div>
+        <div class="tarjeta inlineBlock">Tarjeta 2</div>
+        <div class="tarjeta inlineBlock">Tarjeta 3</div>
+
+        <h2>Tarjeta VAriable con CSS</h2>
+        <div class="tarjetaVariable">
+            <strong>Tarjeta con Variables CSS</strong><br>
+            El color de fondo, texto y borde se controlan con variables en :root.
+        </div>
     </main>
-    
 </body>
 </html>

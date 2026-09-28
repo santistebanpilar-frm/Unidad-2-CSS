@@ -1,3 +1,9 @@
+:root {
+  --color-fondo: #f0f8ff;
+  --color-texto: #333;
+  --color-borde: #1e90ff;
+}
+
 p {
     color: brown;
 }
@@ -12,7 +18,7 @@ p {
     background-color: darkgreen;
 }
 
-h3{
+#idTextoConSombra{
     text-transform: uppercase;
     text-shadow:2px 2px 4px rgba(30, 212, 112, 0.5);
 }
@@ -27,4 +33,54 @@ blockquote{
     font-family: 'Times New Roman', Times, serif;
     font-style: italic;
     
+}
+
+.tarjetaPerfil {
+  width: 300px;
+  margin: 20px auto;               /* separa y centra */
+  padding: 20px;                   /* es el espacio entre el borde y el contenido */
+  background-color: #e6f3ff;       
+  border: 2px solid #0080c0;      
+  border-radius: 12px;             
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);  
+}
+
+.tarjetaPerfil h3 {
+  margin: 0;
+}
+
+.tarjetaPerfil p {
+  margin: 0;
+}
+
+.tarjeta {
+  width: 100px;
+  height: 65px;
+  background-color: lightblue;
+  border: 1px solid #555;
+  text-align: center;
+  line-height: 65px;  
+  margin: 5px;
+}
+
+.block        { 
+    display: block; 
+}
+
+.inline       { 
+    display: inline; 
+}
+
+.inlineBlock { 
+    display: inline-block; 
+}
+
+.tarjetaVariable {
+  background-color: var(--color-fondo);
+  color: var(--color-texto);
+  border: 2px solid var(--color-borde);
+  border-radius: 8px;
+  padding: 10px;
+  width: 200px;
+  margin: 0 auto;   /* la centra horizontalmente */
 }
