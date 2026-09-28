@@ -1,0 +1,298 @@
+/*Reset y básicos */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;   /* los links del menú se deslizan de manera "suave" */
+}
+
+body {
+  font-family: system-ui, -apple-system, sans-serif;
+  line-height: 1.5;
+  color: var(--text);
+  background: var(--bg);
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* variables*/
+:root {
+  --bg: #f8fafc;
+  --panel: #fff;
+  --text: #0f172a;
+  --muted: #64748b;
+  --primary: #2563eb;
+  --primary-600: #1d4ed8;
+  --primary-700: #1e40af;
+  --accent: #16a34a;
+  --danger: #dc2626;
+  --radius: 14px;
+  --shadow: 0 6px 24px rgba(15, 23, 42, 0.08);
+  --container: 1100px;
+
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-8: 32px;
+  --space-10: 40px;
+  --space-12: 48px;
+}
+
+/*clases reutilizadas*/
+.container {
+  width: 100%;
+  max-width: var(--container);
+  margin-inline: auto;         
+  padding-inline: var(--space-4);
+}
+
+.panel {
+  background: var(--panel);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: var(--space-6);
+}
+
+.panel__title {
+  font-size: 1.125rem;
+  margin-bottom: var(--space-2);
+}
+
+.code-note {
+  color: var(--muted);
+  font-size: 0.875rem;
+  margin-bottom: var(--space-4);
+}
+
+/**/
+.site-header {
+  position: sticky;             /* se queda pegado arriba al scrollear */
+  top: 0;
+  z-index: 100;                 /* queda por encima del resto */
+  background: var(--panel);
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.site-header__inner {
+  display: flex;
+  justify-content: space-between;   /* logo a la izquierda, resto a la derecha */
+  align-items: center;
+  min-height: 64px;
+}
+
+.site-header__logo {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-weight: 700;
+  color: var(--text);
+  text-decoration: none;
+}
+
+
+.site-header__mark {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, var(--primary), var(--accent));
+  color: #fff;
+  font-weight: 800;
+}
+
+/* Mobile: el menú está oculto y se ve rayitas menu */
+.site-header__nav {
+  display: none;
+  gap: var(--space-6);
+}
+
+.site-header__nav a {
+  color: var(--text);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.site-header__nav a:hover {
+  color: var(--primary);
+}
+
+.site-header__toggle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+  border: 0;
+  border-radius: 10px;
+  background: #f1f5f9;
+  cursor: pointer;
+}
+
+.site-header__toggle img {
+  width: 24px;
+  height: 24px;
+}
+
+/* Desde 768px (tablet/desktop): se muestra el menú y se oculta menu */
+@media (min-width: 768px) {
+  .site-header__nav { display: flex; }
+  .site-header__toggle { display: none; }
+}
+
+/* Contenedor Flex */
+.btn-group {
+  display: flex;
+  flex-wrap: wrap;          /* si no entran, pasan a otra fila */
+  gap: var(--space-2);      /* separación uniforme */
+}
+
+/* Estilo base (lo comparten todos) */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  min-height: 40px;
+  padding: var(--space-2) var(--space-4);
+  border: 1px solid transparent;
+  border-radius: 999px;
+  font: inherit;
+  font-size: 0.875rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+
+/* Variantes */
+.btn--primary {
+  background: var(--primary);
+  color: #fff;
+}
+.btn--primary:hover  { background: var(--primary-600); }
+.btn--primary:active { background: var(--primary-700); }
+
+.btn--secondary {
+  background: #e2e8f0;
+  color: var(--text);
+}
+.btn--secondary:hover { background: #cbd5e1; }
+
+.btn--outline {
+  background: transparent;
+  border-color: var(--primary);
+  color: var(--primary);
+}
+.btn--outline:hover { background: rgba(37, 99, 235, 0.08); }
+
+.btn--danger {
+  background: var(--danger);
+  color: #fff;
+}
+.btn--danger:hover { background: #b91c1c; }
+
+/* Ícono */
+.btn__icon {
+  width: 20px;
+  height: 20px;
+}
+.btn--primary .btn__icon {
+  filter: brightness(0) invert(1);   /* vuelve blanco un ícono negro */
+}
+
+/* Deshabilitado */
+.btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Accesibilidad: anillo al navegar con teclado */
+.btn:focus-visible {
+  outline: 3px solid rgba(37, 99, 235, 0.4);
+  outline-offset: 2px;
+}
+
+.layout {
+  display: grid;
+  gap: var(--space-6);
+  padding-block: var(--space-8);
+}
+
+@media (min-width: 768px) {
+  .layout {
+    grid-template-columns: 1fr 1fr;   /* dos columnas iguales */
+    align-items: start;               /* cada panel toma su altura natural */
+  }
+}
+
+.product-card {
+  background: var(--panel);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  overflow: hidden;              /* la imagen respeta las esquinas redondeadas */
+}
+
+.product-card__media {
+  position: relative;            /* clave: el badge se ubica respecto a esta caja */
+  aspect-ratio: 4 / 3;
+  background: #f1f5f9;
+}
+
+.product-card__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;             /* ver explicación abajo */
+}
+
+.product-card__badge {
+  position: absolute;            /* superpuesto sobre la imagen */
+  top: var(--space-3);
+  left: var(--space-3);
+  padding: 2px var(--space-3);
+  border-radius: 999px;
+  background: #f59e0b;
+  color: #fff;
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+
+.product-card__info {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  padding: var(--space-4);
+}
+
+.product-card__title {
+  font-size: 1rem;
+}
+
+.product-card__desc {
+  color: var(--muted);
+  font-size: 0.875rem;
+}
+
+.product-card__price {
+  font-size: 1.25rem;
+  font-weight: 800;
+}
+
+.product-card__old-price {
+  color: var(--muted);
+  font-size: 0.8rem;
+}
+
+.section {
+  padding-block: var(--space-4);   /* 16px arriba y abajo de cada sección */
+  scroll-margin-top: 80px;
+}

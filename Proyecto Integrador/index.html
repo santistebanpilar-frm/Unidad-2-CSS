@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+    <title>Trabajo Integrador; MiTienda</title>
+</head>
+<body>
+    <!-- creacion de header -->
+    <header class="site-header" id="top">
+        <div class="container site-header__inner">
+
+            <a href="#top" class="site-header__logo" aria-label="Inicio">
+            <span class="site-header__mark" aria-hidden="true">M</span>
+            <span>MiTienda</span>
+            </a>
+
+            <nav class="site-header__nav">
+            <a href="#novedades">Novedades</a>
+            <a href="#ofertas">Ofertas</a>
+            <a href="#contacto">Contacto</a>
+            </nav>
+
+            <button class="site-header__toggle" aria-label="Abrir menú">
+            <img src="img/menu.svg" alt="">
+            </button>
+
+        </div>
+    </header>
+  
+    <main>
+        <div class="container layout">
+
+            <section class="panel">
+                <h2 class="panel__title">1) Sistema de Botones</h2>
+                <p class="code-note">Base + variantes. Observa padding, radio, foco, hover/active. Usa Flex para el grupo.</p>
+
+                <div class="btn-group">
+                    <button class="btn btn--primary">Primario</button>
+                    <button class="btn btn--secondary">Secundario</button>
+                    <button class="btn btn--outline">Outline</button>
+                    <button class="btn btn--danger">Peligro</button>
+                    <button class="btn btn--primary btn--icon">
+                    <img src="img/search.svg" alt="" class="btn__icon">
+                    Con ícono
+                    </button>
+                    <button class="btn btn--secondary" disabled>Deshabilitado</button>
+                </div>
+              </section>
+            <section class="panel">
+                <h2 class="panel__title">2) Tarjeta de Producto</h2>
+
+                <article class="product-card">
+                    <div class="product-card__media">
+                        <span class="product-card__badge">Nuevo</span>
+                        <img class="product-card__img" src="img/zapatillas.webp" alt="Zapatillas Runner Pro negras y blancas">
+                    </div>
+
+                    <div class="product-card__info">
+                        <h3 class="product-card__title">Zapatillas Runner Pro</h3>
+                        <p class="product-card__desc">Amortiguación ligera, malla respirable y suela antideslizante. Perfectas para entrenar todos los días.</p>
+
+                        <p>
+                            <span class="product-card__price">$ 24.999</span>
+                            <s class="product-card__old-price">$ 29.999</s>
+                        </p>
+
+                        <div class="btn-group">
+                            <button class="btn btn--primary">Comprar ahora</button>
+                            <button class="btn btn--outline btn--icon">
+                            <img src="img/add.svg" alt="" class="btn__icon">
+                            Añadir
+                            </button>
+                        </div>
+                    </div>
+                </article>
+            </section>
+        </div>
+
+        <section class="section" id="novedades">
+            <div class="container">
+                <div class="panel">
+                <h2 class="panel__title">Novedades</h2>
+                <p class="code-note">Sección de relleno para probar el menú.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="ofertas">
+            <div class="container">
+                <div class="panel">
+                <h2 class="panel__title">Ofertas</h2>
+                <p class="code-note">Otra sección de relleno.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="contacto">
+            <div class="container">
+                <div class="panel">
+                <h2 class="panel__title">Contacto</h2>
+                <p class="code-note">Más contenido de ejemplo.</p>
+                </div>
+            </div>
+        </section>
+    
+</body>
+</html>
