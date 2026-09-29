@@ -75,7 +75,7 @@ img {
 
 /**/
 .site-header {
-  position: sticky;             /* se queda pegado arriba al scrollear */
+  position: sticky;             /* se sigue viendo tipo pegado arriba de la pag al scrollear */
   top: 0;
   z-index: 100;                 /* queda por encima del resto */
   background: var(--panel);
@@ -157,7 +157,7 @@ img {
   gap: var(--space-2);      /* separación uniforme */
 }
 
-/* Estilo base (lo comparten todos) */
+/* Estilo base de los botones */
 .btn {
   display: inline-flex;
   align-items: center;
@@ -174,49 +174,61 @@ img {
   transition: background 0.2s, color 0.2s;
 }
 
-/* Variantes */
+/* Variantes de los botones */
 .btn--primary {
   background: var(--primary);
   color: #fff;
 }
-.btn--primary:hover  { background: var(--primary-600); }
-.btn--primary:active { background: var(--primary-700); }
+.btn--primary:hover  { 
+  background: var(--primary-600); 
+}
+.btn--primary:active { 
+  background: var(--primary-700);
+ }
 
 .btn--secondary {
   background: #e2e8f0;
   color: var(--text);
 }
-.btn--secondary:hover { background: #cbd5e1; }
+
+.btn--secondary:hover { 
+  background: #cbd5e1; 
+}
 
 .btn--outline {
   background: transparent;
   border-color: var(--primary);
   color: var(--primary);
 }
-.btn--outline:hover { background: rgba(37, 99, 235, 0.08); }
+.btn--outline:hover { 
+  background: rgba(37, 99, 235, 0.08); 
+}
 
 .btn--danger {
   background: var(--danger);
   color: #fff;
 }
-.btn--danger:hover { background: #b91c1c; }
+.btn--danger:hover { 
+  background: #b91c1c;
+ }
 
-/* Ícono */
+/* Ícono del boton*/
 .btn__icon {
   width: 20px;
   height: 20px;
 }
+
 .btn--primary .btn__icon {
   filter: brightness(0) invert(1);   /* vuelve blanco un ícono negro */
 }
 
-/* Deshabilitado */
+/* boton de deshabilitado */
 .btn:disabled {
   opacity: 0.5;
   cursor: not-allowed;
 }
 
-/* Accesibilidad: anillo al navegar con teclado */
+/* muestra un al pasar el mouse */
 .btn:focus-visible {
   outline: 3px solid rgba(37, 99, 235, 0.4);
   outline-offset: 2px;
@@ -231,7 +243,7 @@ img {
 @media (min-width: 768px) {
   .layout {
     grid-template-columns: 1fr 1fr;   /* dos columnas iguales */
-    align-items: start;               /* cada panel toma su altura natural */
+    align-items: start;               
   }
 }
 
@@ -239,11 +251,11 @@ img {
   background: var(--panel);
   border-radius: var(--radius);
   box-shadow: var(--shadow);
-  overflow: hidden;              /* la imagen respeta las esquinas redondeadas */
+  overflow: hidden;             
 }
 
 .product-card__media {
-  position: relative;            /* clave: el badge se ubica respecto a esta caja */
+  position: relative;            
   aspect-ratio: 4 / 3;
   background: #f1f5f9;
 }
@@ -251,7 +263,7 @@ img {
 .product-card__img {
   width: 100%;
   height: 100%;
-  object-fit: cover;             /* ver explicación abajo */
+  object-fit: cover;             
 }
 
 .product-card__badge {
@@ -293,6 +305,6 @@ img {
 }
 
 .section {
-  padding-block: var(--space-4);   /* 16px arriba y abajo de cada sección */
+  padding-block: var(--space-4);  
   scroll-margin-top: 80px;
 }
